@@ -99,6 +99,79 @@ Part C: Render (Knit) the file to HTML
 
     -   **stage** all of them (tell Git you want to include them in the next commit), The `.` means "add everything in this folder"
 
-8.  
+8.  git status
 
-9.  
+```         
+-   Files should now show in green under "Changes to be committed"
+
+![](images/clipboard-3072502288.png)
+```
+
+9.  git commit -m "First commit add example.qmd and project files"
+
+```         
+-   Now **commit** them with a clear message
+```
+
+Part B: Create a GitHub repository
+
+1.  Go to **github.com** and log in
+
+    -   **Repository name:** `02_etc5513`
+
+    -   Click **Create repository**
+
+![](images/clipboard-2675037616.png)
+
+Part C: Connect your local repo to GitHub and push
+
+![](images/clipboard-185792810.png)
+
+-   `git remote add origin git@github.com:dhanorkartushar2au-lgtm/02_etc5513.git`
+
+    -   This command **links your local repository to your GitHub repository -** Adding new remote with nickname as Origin to the address of our Github repository i.e by SSH
+
+-   `git branch -M main`
+
+    -   This command **renames your current branch to `main`**
+
+    -   `git branch` — used to manage branches , `-M` — means "force rename",`main` — the new name for your branch
+
+-   git push -u origin main
+
+    -   This command **uploads your local commits to GitHub**.
+
+![](images/clipboard-1623071871.png)
+
+#### **Step 3:** Create `testbranch`, Modify `example.qmd`, and Push:
+
+When you create a branch, you get an exact copy of your current files to work on freely — without affecting the `main` branch. This is useful when you want to try something new or make changes without breaking your working code
+
+Part A: Create and switch to `testbranch`
+
+1.  `git checkout -b testbranch` expected output: Switched to a new branch 'testbranch'
+
+    -   `git checkout` — switches branches,`-b` — means "create this branch if it doesn't exist",`testbranch` — the name of the new branch
+
+    -   `git branch` - This lists all branches. The one with a `*`
+
+![](images/clipboard-388725881.png){width="3619"}
+
+Part A: Create and switch to `testbranch`
+
+1.  Modify `example.qmd`
+
+    -   Open `example.qmd` in RStudio and make a change to it. For example, add a new section
+
+        ```{r}
+        x <- c(10, 20, 30, 40, 50)
+        mean(x)
+        ```
+
+2.  `git status` - Check what changed, You'll see `example.qmd` listed as modified
+
+3.  `git add .` - Stage all modified files
+
+4.  `git commit -m "Add new section to example.qmd on testbranch"` - Commit with a clear message
+
+5.  `git push -u origin testbranch` - This pushes the branch to GitHub. The `-u` sets the upstream so future pushes on this branch only need `git push`

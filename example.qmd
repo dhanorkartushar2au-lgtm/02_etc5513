@@ -31,3 +31,12 @@ Multiplication Operation
 #| echo: false
 2 * 2
 ```
+
+#### Adding new section:
+
+working on testbranch
+
+```{r}
+x <- c(10, 20, 30, 40, 50)
+mean(x)
+```

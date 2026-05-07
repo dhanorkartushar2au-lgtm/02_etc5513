@@ -3,7 +3,7 @@
     "path": "~/Desktop/Semester 1/5513(Collaborative)/content/Assignments/02_Assignment_CRP/02_etc5513/example.qmd",
     "project_path": "example.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "3066603701",
     "contents": "",
     "dirty": false,
     "created": 1778139662962.0,
@@ -15,18 +15,19 @@
         "tempName": "Untitled2",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "7,0",
+        "cursorPosition": "38,0",
         "scrollLine": "0",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "14:0"
+        "rmdVisualModeLocation": "801:458.888916015625",
+        "ignored_words": "testbranch\n"
     },
     "folds": "",
-    "lastKnownWriteTime": 1778139935,
+    "lastKnownWriteTime": 1778148382,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1778139935290,
+    "last_content_update": 1778148382275,
     "read_only": false,
     "read_only_alternatives": []
 }
