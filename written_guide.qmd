@@ -242,3 +242,15 @@ Open `example.qmd` in RStudio. It should look like your original version from St
     -   `git push origin main`
 
 4.  I switched back to the `main` branch using `git checkout main`. I then modified `example.qmd` by editing the same section that was changed on `testbranch`, but with different content — deliberately creating a conflict for the next step. I staged the changes with `git add example.qmd`, committed with a descriptive message, and pushed to GitHub using `git push origin main`
+
+#### **Step 6:** Merge `testbranch` into `main`, Resolve Conflict, and Push
+
+1.  make sure you're on main: `git checkout main`
+
+2.  `git status` : Should say `nothing to commit, working tree clean`
+
+3.  Now merge `testbranch` into `main` - `git merge testbranch`
+
+    ![](images/clipboard-3796929922.png)
+
+4.  Open `example.qmd` in RStudio;
