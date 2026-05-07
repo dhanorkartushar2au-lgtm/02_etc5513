@@ -1,0 +1,42 @@
+---
+title: "Assignment_02_Example"
+author: "Tushar Dhanorkar"
+format: html
+editor: visual
+---
+
+## **Step 1: Create a new RStudio Project**
+
+-   Create a new RStudio Project. In this folder, create a simple qmd file called `example.qmd` that can be knitted into a HTML file. Show the result of the knitted file.
+
+-   I then created a simple *example.qmd* file with:
+
+    -   A YAML header specifying title, author and html format
+
+    -   Two R code chunks demonstrating basic calculations
+
+-   The file was rendered into HTML using the Render button which executes all code chunks and produces a formatted HTML document.
+
+-   Save this file as example.qmd
+
+Addition Operation
+
+```{r}
+1 + 1
+```
+
+Multiplication Operation
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+#### Adding new section:
+
+working on testbranch
+
+```{r}
+x <- c(10, 20, 30, 40, 50)
+mean(x)
+```
