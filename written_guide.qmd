@@ -5,204 +5,240 @@ format: pdf
 editor: visual
 ---
 
-Assignment 2
+## Assignment 2
 
 This guide walk through ten practical steps demonstrating the use of Git, Github and Command line interface for Version control and collaboration. Each step explains what to do and why does this matters.
 
-Step 1: Create the RStudio Project
+#### **Step 1: Create the RStudio Project**
 
-What is an RStudio Project?
+#### What is an RStudio Project?
 
-An RStudio Project is simply a folder on your computer that RStudio treats as a self-contained workspace. It keeps all your files, settings, and working directory in one place. When you open the project, RStudio automatically sets the working directory to that folder — which is important for reproducibility.
+An RStudio Project is simply a **folder on your computer** that RStudio treats as a self-contained workspace. It keeps all your files, settings, and working directory in one place. When you open the project, RStudio automatically sets the working directory to that folder — which is important for reproducibility.
 
 Part A: Create the RStudio Project
 
-Open RStudio
+1.  Open **RStudio**
 
-Click File in the top menu → New Project.
+2.  Click **File** in the top menu → **New Project.**
 
-A dialog box appears. Choose New Directory
+3.  A dialog box appears. Choose **New Directory**
 
-Then choose New Project
+4.  Then choose **New Project**
 
-You'll see a form:
+5.  You'll see a form:
 
-Directory name: type 02_etc5513
+    -   **Directory name:** type 02_etc5513
 
-Create project as subdirectory of: choose a location on your computer (e.g. your Desktop or Documents folder)
+    -   **Create project as subdirectory of:** choose a location on your computer (e.g. your Desktop or Documents folder)
 
-Click Create Project
+6.  Click **Create Project**
 
-RStudio will reload and you'll now be inside your new project. You'll notice the top-right corner of RStudio shows your project name. In the Files panel (bottom-right), you'll see one file: assignment2.Rproj
+7.  RStudio will reload and you'll now be inside your new project. You'll notice the top-right corner of RStudio shows your project name. In the Files panel (bottom-right), you'll see one file: `assignment2.Rproj`
 
-Part B: Create the example.qmd file
+![](images/clipboard-759875795.png)
 
-A .qmd file is a Quarto Markdown file — it lets you mix plain text, formatting, and R code chunks, then render it all into a nice HTML (or PDF, etc.) document.
+Part B: Create the `example.qmd` file
 
-Go to File → New File → Quarto Document...
+A `.qmd` file is a **Quarto Markdown** file — it lets you mix plain text, formatting, and R code chunks, then render it all into a nice HTML (or PDF, etc.) document.
 
-A dialog appears:
+1.  Go to **File → New File → Quarto Document...**
 
-Title: type something like "Assignment_02_Example"
+2.  A dialog appears:
 
-Author: "Tushar Dhanorkar"
+    -   **Title:** type something like "Assignment_02_Example"
 
-Make sure HTML is selected as the output format
+    -   **Author:** "Tushar Dhanorkar"
 
-Click Create
+    -   Make sure **HTML** is selected as the output format
 
-Your file will have a YAML header at the top (between the --- lines) and some default content. You can simplify it to look like this:
+3.  Click **Create**
+
+4.  Your file will have a YAML header at the top (between the `---` lines) and some default content. You can simplify it to look like this:
 
 Part C: Render (Knit) the file to HTML
 
-The YAML header controls the document settings. The \## Introduction is a heading. The \`\`\`{r} block is an R code chunk — it will run the R code and show the output in the rendered document.
+1.  The YAML header controls the document settings. The `## Introduction` is a heading. The ```` ```{r} ```` block is an R code chunk — it will run the R code and show the output in the rendered document.
 
-Rendering" means Quarto takes your .qmd file, runs all the R code, and produces a finished HTML file.
+2.  Rendering" means Quarto takes your `.qmd` file, runs all the R code, and produces a finished HTML file.
 
-Click the Render button at the top of the editor.
+3.  Click the **Render** button at the top of the editor.
 
-Step 2: Initialise Git and push to GitHub
+![](images/clipboard-2708816945.png)
 
-What you need before starting:
+#### **Step 2: Initialise Git and push to GitHub**
 
-Git installed on your computer (type git --version in your terminal to check)
+1.  What you need before starting:
 
-A GitHub account at github.com
+    -   **Git installed** on your computer (type `git --version` in your terminal to check)
 
-Git configured with your name and email (only needs to be done once):
+    -   A **GitHub account** at github.com
 
-Open the Terminal and navigate to your project folder
+    -   Git configured with your name and email (only needs to be done once):
 
-Go to Tools → Terminal → New Terminal
+2.  Open the Terminal and navigate to your project folder
 
-Or click the Terminal tab next to Console
+    -   Go to **Tools → Terminal → New Terminal**
 
-You need to make sure you're inside your project folder. Since RStudio Projects automatically set the working directory, you should already be there. Confirm it by typing:
+    -   Or click the **Terminal** tab next to Console
 
-pwd
+3.  You need to make sure you're inside your project folder. Since RStudio Projects automatically set the working directory, you should already be there. Confirm it by typing:
 
-This prints your current directory. It should end with /02_etc5513
+4.  pwd
 
-git init
+    -   This prints your current directory. It should end with `/02_etc5513`
 
-This creates a hidden .git folder inside your project folder. That folder is what makes it a Git repository — it stores all version history.
+5.  git init
 
-git status
+    -   This creates a hidden `.git` folder inside your project folder. That folder is what makes it a Git repository — it stores all version history.
 
-You'll see example.qmd, example.html , images/ , etcas untracked files.
+6.  git status
 
-git add .
+    -   You'll see `example.qmd, example.html , images/ , etc`as untracked files.
 
-stage all of them (tell Git you want to include them in the next commit), The . means "add everything in this folder"
+7.  git add .
 
-git status
+    -   **stage** all of them (tell Git you want to include them in the next commit), The `.` means "add everything in this folder"
 
--   Files should now show in green under "Changes to be committed"
-
-![](images/clipboard-3072502288.png)
-
-git commit -m "First commit add example.qmd and project files"
-
--   Now **commit** them with a clear message
+8.  `git status` - Files should now show in green under "Changes to be committed"git commit -m "First commit add example.qmd and project files"
 
 Part B: Create a GitHub repository
 
-Go to github.com and log in
+1.  Go to **github.com** and log in
 
-Repository name: 02_etc5513
+    -   **Repository name:** `02_etc5513`
 
-Click Create repository
+    -   Click **Create repository**
+
+![](images/clipboard-2675037616.png)
 
 Part C: Connect your local repo to GitHub and push
 
-git remote add origin git\@github.com:dhanorkartushar2au-lgtm/02_etc5513.git
+![](images/clipboard-185792810.png)
 
-This command links your local repository to your GitHub repository - Adding new remote with nickname as Origin to the address of our Github repository i.e by SSH
+-   `git remote add origin git@github.com:dhanorkartushar2au-lgtm/02_etc5513.git`
 
-git branch -M main
+    -   This command **links your local repository to your GitHub repository -** Adding new remote with nickname as Origin to the address of our Github repository i.e by SSH
 
-This command renames your current branch to main
+-   `git branch -M main`
 
-git branch — used to manage branches , -M — means "force rename",main — the new name for your branch
+    -   This command **renames your current branch to `main`**
 
-git push -u origin main
+    -   `git branch` — used to manage branches , `-M` — means "force rename",`main` — the new name for your branch
 
-This command uploads your local commits to GitHub.
+-   git push -u origin main
 
-Step 3: Create testbranch, Modify example.qmd, and Push:
+    -   This command **uploads your local commits to GitHub**.
 
-When you create a branch, you get an exact copy of your current files to work on freely — without affecting the main branch. This is useful when you want to try something new or make changes without breaking your working code
+![](images/clipboard-1623071871.png)
 
-Part A: Create and switch to testbranch
+#### **Step 3:** Create `testbranch`, Modify `example.qmd`, and Push:
 
-git checkout -b testbranch expected output: Switched to a new branch 'testbranch'
+When you create a branch, you get an exact copy of your current files to work on freely — without affecting the `main` branch. This is useful when you want to try something new or make changes without breaking your working code
 
-git checkout — switches branches,-b — means "create this branch if it doesn't exist",testbranch — the name of the new branch
+Part A: Create and switch to `testbranch`
 
-git branch - This lists all branches. The one with a \*
+1.  `git checkout -b testbranch` expected output: Switched to a new branch 'testbranch'
 
-Part A: Create and switch to testbranch and push
+    -   `git checkout` — switches branches,`-b` — means "create this branch if it doesn't exist",`testbranch` — the name of the new branch
 
-Modify example.qmd
+    -   `git branch` - This lists all branches. The one with a `*`
 
-Open example.qmd in RStudio and make a change to it. For example, add a new section
+![](images/clipboard-388725881.png){width="3619"}
 
-{r} x \<- c(10, 20, 30, 40, 50) mean(x)
+Part A: Create and switch to `testbranch` and push
 
-git status - Check what changed, You'll see example.qmd listed as modified
+1.  Modify `example.qmd`
 
-git add . - Stage all modified files
+    -   Open `example.qmd` in RStudio and make a change to it. For example, add a new section
 
-git commit -m "Add new section to example.qmd on testbranch" - Commit with a clear message
+        ```{r}
+        x <- c(10, 20, 30, 40, 50)
+        mean(x)
+        ```
 
-git push -u origin testbranch - This pushes the branch to GitHub. The -u sets the upstream so future pushes on this branch only need git push
+2.  `git status` - Check what changed, You'll see `example.qmd` listed as modified
 
-When we ran git add . AND git commit -m "Add new section to example.qmd on testbranch" changes were saved to our local repository.
+3.  `git add .` - Stage all modified files
 
-When we ran git push -u origin testbranch Those same changes were uploaded to GitHub.
+4.  `git commit -m "Add new section to example.qmd on testbranch"` - Commit with a clear message
 
-Step 4: Create data/ Folder, Add Assignment 1 Data, and Amend the Previous Commit
+5.  `git push -u origin testbranch` - This pushes the branch to GitHub. The `-u` sets the upstream so future pushes on this branch only need `git push`
 
-Amending means modifying the most recent commit — instead of creating a brand new commit, you update the last one to include something you forgot.
+![](images/clipboard-4171620953.png)
+
+When we ran `git add .` AND `git commit -m "Add new section to example.qmd on testbranch"` changes were saved to our local repository.
+
+When we ran `git push -u origin testbranch` Those same changes were uploaded to **GitHub.**
+
+#### **Step 4:** Create `data/` Folder, Add Assignment 1 Data, and Amend the Previous Commit
+
+Amending means **modifying the most recent commit** — instead of creating a brand new commit, you update the last one to include something you forgot.
 
 So in this case, we are going back to last commit in branch testbranch and saying that "we wanted to add data folder"
 
-Ensure that we are on testbranch
+1.  Ensure that we are on testbranch
 
-git checkout testbranch - switch to testbranch we in case we are not in
+    -   `git checkout testbranch`  - switch to testbranch we in case we are not in
 
-Create the data/ folder and add your Assignment 1 data
+2.  Create the `data/` folder and add your Assignment 1 data
 
-mkdir data
+3.  `mkdir data`
 
-This creates a folder called data inside your project.
+    -   This creates a folder called `data` inside your project.
 
-git status we can see that data folder is unstage
+4.  `git status` we can see that data folder is unstage
 
-git add data/ Stage the data folder
+    ![](images/clipboard-3041359356.png){width="706"}
 
-git status Now check the status and the data file(s) listed as staged under "Changes to be committed"
+5.  `git add data/` Stage the data folder
 
-git commit --amend -m "Adding data folder"
+6.  `git status` Now check the status and the data file(s) listed as staged under "Changes to be committed"
 
-git push --force origin testbranch
+    ![](images/clipboard-2936962398.png)
 
-since we rewrote the last commit, a normal git push will be rejected so we need to do force push
+7.  `git commit --amend -m "Adding data folder"`
 
-Verification Go to your GitHub repository, switch to testbranch, and confirm data folder
+8.  `git push --force origin testbranch`
 
-Step 5: Switch to main and Create a Conflicting Change:
+    -   since we rewrote the last commit, a normal `git push` will be **rejected so we need to do force push**
 
-A merge conflict happens when two branches modify the same part of the same file in different ways. Git doesn't know which version to keep, so it asks you to decide manually.
+9.  Verification Go to your GitHub repository, switch to `testbranch`, and confirm data folder
 
-In this step we deliberately creating that conflict by editing the same part of example.qmd on main that we already edited on testbranch
+![](images/clipboard-163121543.png)
 
-git checkout main - Switched to branch 'main'
+#### **Step 5:** Switch to `main` and Create a Conflicting Change:
 
-git branch - Confirm we're on main
+A merge conflict happens when **two branches modify the same part of the same file in different ways**. Git doesn't know which version to keep, so it asks you to decide manually.
 
-Check what example.qmd looks like on main
+In this step we **deliberately** creating that conflict by editing the same part of `example.qmd` on `main` that we already edited on `testbranch`
 
-Notice that when you switched to main, the changes you made on testbranch are gone from your files. That's normal — each branch has its own version of the files.
+1.  `git checkout main` - Switched to branch 'main'
 
-Open example.qmd in RStudio. It should look like your original version from Step 1, without the new section you added on testbranch
+2.  `git branch` - Confirm we're on `main`
+
+Check what `example.qmd` looks like on `main`
+
+Notice that when you switched to `main`, the changes you made on `testbranch` are **gone from your files**. That's normal — each branch has its own version of the files.
+
+Open `example.qmd` in RStudio. It should look like your original version from Step 1, without the new section you added on `testbranch`
+
+1.  Modify `example.qmd` again
+
+    -   Open `example.qmd` in RStudio and make a change to it. We are just changing the variable name i.e "y"
+
+        ```{r}
+        y <- c(10, 20, 30, 40, 50)
+        mean(y)
+        ```
+
+2.  **both branches are changing the same part of the file** but in different ways. Save the file.
+
+3.  Stage and commit the changes
+
+    -   `git add example.qmd`
+
+    -   `git commit -m "Add conflicting section to example.qmd on main"`
+
+    -   `git push origin main`
+
+4.  I switched back to the `main` branch using `git checkout main`. I then modified `example.qmd` by editing the same section that was changed on `testbranch`, but with different content — deliberately creating a conflict for the next step. I staged the changes with `git add example.qmd`, committed with a descriptive message, and pushed to GitHub using `git push origin main`
