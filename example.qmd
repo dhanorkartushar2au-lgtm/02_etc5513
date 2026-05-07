@@ -32,7 +32,7 @@ Multiplication Operation
 2 * 2
 ```
 
-<<<<<<< HEAD
+
 ## New Section on main
 
 This section was added on main and will conflict with testbranch.
@@ -40,13 +40,8 @@ This section was added on main and will conflict with testbranch.
 ```{r}
 y <- c(10, 20, 30, 40, 50)
 sum(y)
-=======
-#### Adding new section:
 
-working on testbranch
-
-```{r}
 x <- c(10, 20, 30, 40, 50)
 mean(x)
->>>>>>> testbranch
+
 ```

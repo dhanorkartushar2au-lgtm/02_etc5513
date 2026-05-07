@@ -254,3 +254,13 @@ Open `example.qmd` in RStudio. It should look like your original version from St
     ![](images/clipboard-3796929922.png)
 
 4.  Open `example.qmd` in RStudio;
+
+![](images/clipboard-2007471249.png)
+
+5.  Resolve the conflict: Delete the conflict markers and keep whichever version you want (or combine both).
+
+    `git commit -m "Resolve merge conflict between main and testbranch"`
+
+6.  `git push origin main` Push to GitHub
+
+![](images/clipboard-2381811112.png)
