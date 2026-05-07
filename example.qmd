@@ -31,3 +31,12 @@ Multiplication Operation
 #| echo: false
 2 * 2
 ```
+
+## New Section on main
+
+This section was added on main and will conflict with testbranch.
+
+```{r}
+y <- c(10, 20, 30, 40, 50)
+sum(y)
+```
